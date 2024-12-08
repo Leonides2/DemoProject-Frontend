@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DemoFrontend
 
-Currently, two official plugins are available:
+This project is part of the demostration of my knowledge in `C#`, `TS` and `SQL`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The structure is:
+- DemoFrontend (as frontend)
+- DemoBackend (as backend and DB)
+    - API
+    - Domain
+    - Features
+    - Infrastructure (SQLite as persistance)
 
-## Expanding the ESLint configuration
+All the projects have their respective repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [DemoBackend](https://github.com/Leonides2/DemoProject-Backend)
+ > Click the link to go the repository
 
-- Configure the top-level `parserOptions` property like this:
+- [DemoFrontend](https://github.com/Leonides2/DemoProject-Frontend)
+ > This repository
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Requirements
+
+To run this project, you <ins>**require**</ins> the following packages:
+
+ - Node.js version 18+ or later
+
+## Install and run steps
+
+When you clone the repository, you need to run the following steps:
+
+1. Run CMD in windows or bash in MacOS/Linux in the repository folder
+2. Get into the main project => **API**
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+cd /API
+```
+3. Restore the dependencies
+```
+dotnet restore
+```
+4. Build the project
+```
+dotnet build
+```
+5. Run the project
+```
+dotnet run
 ```
