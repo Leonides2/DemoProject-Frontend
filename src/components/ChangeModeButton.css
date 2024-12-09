@@ -1,0 +1,29 @@
+.change-mode-button{
+    
+    background-color: #1a1a1a;;
+    transition: 500ms;
+    border-color: white;
+    z-index: 3;
+
+    position: sticky;
+    left: 5vh;
+    top: 5vh;
+
+    && svg path {
+        stroke: white;
+        height: 4vh;
+        width: 4vh;
+        stroke-width: 1.5;
+        transition: 500ms;
+    }
+}
+.light{
+    background-color: rgb(218, 216, 216);
+    color: indianred;
+    transition: 500ms;
+  
+    && svg path {
+        stroke: black;
+        transition: 500ms;
+    }
+  }
