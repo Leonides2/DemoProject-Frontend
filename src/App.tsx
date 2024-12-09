@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import useGetUsers from './api/hooks/user/getUsersHook'
-import ChangeModeButton from './components/ChangeModeButton'
+import { useEffect, useState } from 'react'
+import ChangeModeButton from './components/ChangeModeButton/ChangeModeButton'
 import { useGlobalSettings } from './hooks/useGlobalSettingsHook'
+import ScoreList from './components/ScoreList/ScoreList'
 
 function App() {
   const [count, setCount] = useState(0)
   const { isDarkMode } = useGlobalSettings()
+  useEffect(()=>{
 
-  const { data: Users, isError: userError } = useGetUsers()
-
-  if (userError || !Users) return <> Error</>
-
+  });
   return (
     <main className={`main ${isDarkMode ? '' : 'light-component'}`}>
       <ChangeModeButton />
@@ -22,17 +20,7 @@ function App() {
           <h3>
             Users:
           </h3>
-          <div className={`user-score-list ${isDarkMode ? '' : 'light'}`}>
-            {
-              Users.map(
-                item => {
-                  return <p key={item.id}>
-                    {item.username}  {item.score}
-                  </p>
-                }
-              )
-            }
-          </div>
+          <ScoreList/>
           <div>
             <h3>
               Click count: {count}

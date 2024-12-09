@@ -89,7 +89,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ccec13;
+  border-color: indianred;
 }
 button:focus,
 button:focus-visible {

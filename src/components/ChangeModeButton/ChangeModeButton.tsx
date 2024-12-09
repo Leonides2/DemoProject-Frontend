@@ -1,6 +1,6 @@
 
 import "./ChangeModeButton.css"
-import { useGlobalSettings } from "../hooks/useGlobalSettingsHook"
+import { useGlobalSettings } from "../../hooks/useGlobalSettingsHook"
 
 
 const ChangeModeButton = () =>{
