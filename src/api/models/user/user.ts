@@ -4,3 +4,8 @@ export type User = {
     username: string,
     score: string
 }
+
+export type UserData = {
+    username: string, 
+    score: string
+}

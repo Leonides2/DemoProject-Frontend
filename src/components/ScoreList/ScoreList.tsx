@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import * as signalR from "@microsoft/signalr"
 import useGetUsers from "../../api/hooks/user/getUsersHook";
 import { useGlobalSettings } from "../../hooks/useGlobalSettingsHook";
+import "./ScoreList.css"
 
 const ScoreList = () =>{
 

@@ -1,0 +1,33 @@
+.modal{
+    background-color: #3f3f3f;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 0.2rem solid aqua;
+
+    position: absolute;
+    left: calc(100vw - 75%);
+    top: calc(100vh - 60%);
+    z-index: 3;
+    width: 50%;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 40% auto;
+}
+
+.modal-header{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: end;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+.active{
+    display: none;
+}

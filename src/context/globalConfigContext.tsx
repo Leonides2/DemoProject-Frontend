@@ -3,7 +3,9 @@ import { createContext } from "react"
 
 interface settings {
     isDarkMode: boolean,
-    toggleMode: () => void
+    toggleMode: () => void,
+    isModalShow: boolean,
+    toggleModalShow: () => void
 }
 
 export const GlobalConfigContext = createContext<settings | undefined>(undefined)
