@@ -1,0 +1,79 @@
+.main{
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    transition: 500ms
+  }
+  
+  .main-container{
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  
+  
+  .light{
+    background-color: rgb(218, 216, 216);
+    color: indianred;
+    transition: 500ms;
+  
+    && svg path {
+        stroke: black;
+        transition: 500ms;
+    }
+
+    && div {
+        background-color: white;
+    }
+  }
+  
+  .light-component{
+    background-color: white;
+    color: #525252;
+    transition: 300ms;
+  
+    && svg path {
+        stroke: black;
+        transition: 500ms;
+    }
+
+    && div{
+        background-color: white;
+        transition: 300ms;
+    }
+  }
+
+.reset-button{
+    border-radius: 8px;
+    height: max-content;
+    text-align: center;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.counter-text-container{
+    background-color: #302f2f;
+    border-radius: 8px;
+    height: auto;
+    padding: 0.6em 1.2em;
+    height: min-content;
+}
+
+.counter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}

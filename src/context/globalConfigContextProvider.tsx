@@ -6,7 +6,7 @@ interface globalProviderProps {
   }
 
 export const GlobalConfigProvider: React.FC<globalProviderProps> = ({children}) => {
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+    const [isDarkMode, setIsDarkMode] = useState<boolean>( window.matchMedia('(prefers-color-scheme: dark)').matches ?  true: false);
     const [isModalShow, setModalShow] = useState<boolean>(true);
   
     const toggleMode = () => {

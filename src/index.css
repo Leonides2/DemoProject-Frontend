@@ -28,49 +28,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main{
-  z-index: 1;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  transition: 500ms
-}
 
-.main-container{
-  display: grid;
-  grid-template-columns: 20% 1fr 20%;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-
-
-.light{
-  background-color: rgb(218, 216, 216);
-  color: indianred;
-  transition: 500ms;
-
-  && svg path {
-      stroke: black;
-      transition: 500ms;
-  }
-}
-
-.light-component{
-  background-color: white;
-  color: #525252;
-  transition: 500ms;
-
-  && svg path {
-      stroke: black;
-      transition: 500ms;
-  }
-}
 
 button {
   border-radius: 8px;
