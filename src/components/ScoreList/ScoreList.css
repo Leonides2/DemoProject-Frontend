@@ -4,8 +4,15 @@
     text-align: center;
     padding: 0.1em;
     color: #ccec13;
+    
   }
-
+.score-item{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+}
   .light{
     background-color: rgb(218, 216, 216);
     color: indianred;

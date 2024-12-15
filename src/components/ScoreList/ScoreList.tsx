@@ -38,12 +38,18 @@ const ScoreList = () =>{
     return(
     <>
         <div className={`user-score-list ${isDarkMode ? '' : 'light'}`}>
+        <div className="score-item">
+        <p> Username</p> <p> Score</p>
+        </div>
+        
             {
               Users?.map(
                 item => {
-                  return <p key={item.id}>
-                    {item.username}  {item.score}
-                  </p>
+                  return <div className="score-item" key={item.id}>
+                    <p>{item.username}  </p>
+                    <p>{item.score}</p>
+                    
+                  </div>
                 }
               )
             }
