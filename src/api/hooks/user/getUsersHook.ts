@@ -7,7 +7,9 @@ const useGetUsers = () => {
     return useQuery<User[]>({
         queryKey: ["users"], 
         queryFn: getAllUsers,
-        staleTime: Infinity
+        staleTime: Infinity,
+        retry: true,
+        retryDelay: 100
     })
 }
 
