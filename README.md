@@ -9,7 +9,8 @@ The structure is:
     - API
     - Domain
     - Features
-    - Infrastructure (SQLite as persistance)
+    - Infrastructure (persistance)
+- [Neon PostgreSQL](https://neon.tech/home) as persistance
 
 All the projects have their respective repository
 

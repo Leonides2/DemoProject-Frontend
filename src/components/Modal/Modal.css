@@ -2,22 +2,23 @@
     background-color: #3f3f3f;
     border-radius: 1rem;
     padding: 1rem;
-    border: 0.2rem solid aqua;
+    border: 0.2rem solid rgb(105, 105, 105);
 
     position: absolute;
     left: calc(100vw - 75%);
     top: calc(100vh - 60%);
-    z-index: 3;
+    z-index: 7;
     width: 50%;
-
+    height: auto;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 40% auto;
+    grid-template-rows: 20% auto;
 }
 
 .modal-header{
     grid-row: 1/2;
     display: flex;
+    height: auto;
     justify-content: end;
 }
 
@@ -26,8 +27,43 @@
     flex-direction: column;
     align-items: center;
     width: auto;
+    height: auto;
 }
 
-.active{
+.modal-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.modal-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.disable{
     display: none;
+}
+
+.exit-button{
+    display: flex;
+    height: auto;
+    background-color: rgb(198, 230, 19);
+    color: #3f3f3f;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms;
+}
+.exit-button:hover{
+    background-color: #a9b474;
+    color: indianred;
 }

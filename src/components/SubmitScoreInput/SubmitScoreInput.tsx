@@ -1,8 +1,8 @@
 
-import Modal from "../Modal/Modal"
 import "./SubmitScoreInput.css"
 import usePostUser from "../../api/hooks/user/postUserHook"
 import { SubmitHandler, useForm } from "react-hook-form"
+import Modal from "../Modal/Modal"
 
 const SubmitScoreInput = () =>{
 
@@ -20,6 +20,10 @@ const SubmitScoreInput = () =>{
                 <form className="score-submit-container"
                     onSubmit={handleSubmit(onSubmit)}
                 >
+                    <h3>
+                        Save your data
+                    </h3>
+                    <label>Username</label>
                             <input type="text"
                             placeholder="Insert a username to save your score"
                             maxLength={32}

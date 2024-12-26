@@ -4,11 +4,7 @@
     transition: 500ms;
     border-color: white;
     z-index: 3;
-
-    position: sticky;
-    left: 5vh;
-    top: 5vh;
-
+    
     && svg path {
         stroke: white;
         height: 4vh;

@@ -5,10 +5,6 @@
     border-color: white;
     z-index: 3;
 
-    position: sticky;
-    left: 92vw;
-    top: 5vh;
-
     && svg path {
         stroke: white;
         height: 4vh;

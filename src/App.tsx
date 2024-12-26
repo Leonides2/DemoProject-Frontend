@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import ChangeModeButton from './components/ChangeModeButton/ChangeModeButton'
 import { useGlobalSettings } from './hooks/useGlobalSettingsHook'
 import ScoreList from './components/ScoreList/ScoreList'
-import SubmitScoreInput from './components/SubmitScoreInput/SubmitScoreInput'
 import HideModalButton from './components/HideModalButton.tsx/HideModalButton'
 
 import "./App.css"
+import SubmitScoreInput from './components/SubmitScoreInput/SubmitScoreInput'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,40 +19,60 @@ function App() {
     console.log(score)
   }, [count]);
   return (
-    <main className={`main ${isDarkMode ? '' : 'light-component'}`}>
-      <ChangeModeButton />
-      <HideModalButton />
-      <div className='main-container'>
-        <div id='left'>
+    <>
+      <header className={`header `}>
+        Tools: 
+        <ChangeModeButton />
+        <HideModalButton />
+        <SubmitScoreInput />
 
-        </div>
-        <div id='center'>
-          <h3>
-            Users:
-          </h3>
-          <SubmitScoreInput />
-          <ScoreList />
-          <div className={`counter-container ${isDarkMode ? '' : 'light-component'}`}>
-            <div className='counter-text-container'>
-              <h3>
-                Click count: {count}
-              </h3>
+        
+      </header>
+      <main className={`main ${isDarkMode ? '' : 'light-component'}`}>
+
+        <div className='main-container'>
+          <div id='left'>
+            <div>
+              <h3> High Scores</h3>
             </div>
-
-            <button className='reset-button' onClick={() => setCount(0)}>
-              reset count
-            </button>
+            <ScoreList />
           </div>
-          <button onClick={() => setCount(count + 1)}>
-            click here
-          </button>
-        </div>
-        <div id='right'>
+          <div id='center'>
+            <h3>
+              Clicker Game
+            </h3>
+
+            
+            
+            <div className={`counter-container ${isDarkMode ? '' : 'light-component'}`}>
+              <button type='button' className='counter-text-container' onClick={() => setCount(count + 1)}>
+                <h3>
+                  Click count: {count}
+                </h3>
+                <p>Click here</p>
+              </button>
+
+              <button className='reset-button' onClick={() => setCount(0)}>
+                reset count
+              </button>
+            </div>
+          </div>
+          <div id='right'>
+            <div>
+              <h3> Latest Events </h3>
+            </div>
+          </div>
 
         </div>
-
-      </div>
-    </main>
+      </main>
+      <footer className='footer'>
+          <div>
+            <h1>
+              About
+            </h1>
+          </div>
+      </footer>
+    </>
   )
 }
 

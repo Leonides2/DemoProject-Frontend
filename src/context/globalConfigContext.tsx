@@ -4,7 +4,7 @@ import { createContext } from "react"
 interface settings {
     isDarkMode: boolean,
     toggleMode: () => void,
-    isModalShow: boolean,
+    isModalDisable: boolean,
     toggleModalShow: () => void
 }
 

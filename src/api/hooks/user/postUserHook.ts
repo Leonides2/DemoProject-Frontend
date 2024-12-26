@@ -1,5 +1,6 @@
 import { useMutation } from "react-query";
 import { postUser } from "../../modules/users/services/userService";
+import { UserData } from "../../models/user/user";
 
 const usePostUser = (onSuccess: () => void) => {
 
@@ -8,9 +9,11 @@ const usePostUser = (onSuccess: () => void) => {
             let score = localStorage.getItem("score")
             if(!score || isNaN(Number(score))) return
 
-            const data = {
+            let data: UserData ={
                 username: username,
-                score: score
+                score: score,
+                email: null,
+                password: null
             }
             return postUser({data});
         }, 

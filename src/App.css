@@ -2,15 +2,18 @@
     z-index: 1;
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
-    height: 100%;
+    height: auto;
     width: 100%;
     margin: 0;
-    transition: 500ms
+    transition: 500ms;
+    overflow-y: auto;
   }
   
   .main-container{
     display: grid;
     grid-template-columns: 20% 1fr 20%;
+    padding: 0.5rem;
+    column-gap: 0.5rem;
   }
   
   h1 {
@@ -76,4 +79,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+}
+.header{
+  display: flex;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  height: 7vh;
+
+  background-color:  #ccec13;
+  color: black;
+  transition: 500ms;
+  overflow-x: auto;
+}
+.footer{
+  display: flex;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  height: 7vh;
+
+  background-color:  #ccec13;
+  color: black;
+  transition: 500ms;
+  overflow-x: auto;
 }
