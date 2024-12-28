@@ -6,6 +6,7 @@ import HideModalButton from './components/HideModalButton.tsx/HideModalButton'
 
 import "./App.css"
 import SubmitScoreInput from './components/SubmitScoreInput/SubmitScoreInput'
+import ImageRandom from './components/ImageRandom/ImageRandom'
 
 
 function App() {
@@ -42,9 +43,11 @@ function App() {
               Clicker Game
             </h3>
 
+
             
             
             <div className={`counter-container ${isDarkMode ? '' : 'light-component'}`}>
+              <ImageRandom/>
               <button type='button' className='counter-text-container' onClick={() => setCount(count + 1)}>
                 <h3>
                   Click count: {count}
@@ -66,10 +69,11 @@ function App() {
         </div>
       </main>
       <footer className='footer'>
+          <div className='line'></div>
           <div>
-            <h1>
+            <a target='_blank' href='https://github.com/Leonides2/DemoProject-Frontend'>
               About
-            </h1>
+            </a>
           </div>
       </footer>
     </>

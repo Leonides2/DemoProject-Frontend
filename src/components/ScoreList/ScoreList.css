@@ -4,8 +4,13 @@
     text-align: center;
     padding: 0.1em;
     color: #ccec13;
-    
+    margin-bottom: 0.2rem;
+    overflow-y: hidden;
+    overflow-clip-margin: 2rem;
   }
+
+
+
 .score-item{
     display: flex;
     justify-content: center;

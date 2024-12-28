@@ -2,18 +2,20 @@
     z-index: 1;
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
-    height: auto;
+    /*height: 88vh;*/
     width: 100%;
     margin: 0;
     transition: 500ms;
-    overflow-y: auto;
+    overflow-y: hidden;
   }
   
   .main-container{
     display: grid;
     grid-template-columns: 20% 1fr 20%;
-    padding: 0.5rem;
+    grid-template-rows: 100%;
+    padding-inline: 0.5rem;
     column-gap: 0.5rem;
+    height: 100%;
   }
   
   h1 {
@@ -77,14 +79,27 @@
 .counter-container{
     display: flex;
     justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
     align-items: center;
     padding: 1rem;
 }
+
+#left{
+  height: 100%;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  grid-template-columns: auto;
+}
+
 .header{
   display: flex;
   padding: 0.5rem;
   gap: 0.5rem;
-  height: 7vh;
+  height: auto;
 
   background-color:  #ccec13;
   color: black;
@@ -96,9 +111,43 @@
   padding: 0.5rem;
   gap: 0.5rem;
   height: 7vh;
-
+  flex-direction: column;
   background-color:  #ccec13;
+  justify-content: center;
+  align-items: center;
   color: black;
   transition: 500ms;
   overflow-x: auto;
+  overflow-y: hidden;
+
+  && a {
+    text-decoration: none;
+    color: #242424;
+  }
+
+  && a:hover{
+    color: aqua;
+  }
+}
+
+.line{
+  background-color: #242424;
+  height: 2px;
+  width: 100%;
+
+  animation: streching 3s infinite;
+}
+
+
+@keyframes streching {
+	0% {
+    opacity: 1;
+		width: 0%;
+		animation-timing-function: ease-out;
+	}
+
+  100%{
+    opacity: 0;
+    width: 100%;
+  }
 }

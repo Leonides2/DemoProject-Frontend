@@ -31,19 +31,12 @@ To run this project, you <ins>**require**</ins> the following packages:
 When you clone the repository, you need to run the following steps:
 
 1. Run CMD in windows or bash in MacOS/Linux in the repository folder
-2. Get into the main project => **API**
-```
-cd /API
-```
+2. Get into the project
 3. Restore the dependencies
 ```
-dotnet restore
+npm install
 ```
-4. Build the project
+4. Run the project
 ```
-dotnet build
-```
-5. Run the project
-```
-dotnet run
+npm run dev
 ```

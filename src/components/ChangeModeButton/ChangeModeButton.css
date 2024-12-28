@@ -3,11 +3,12 @@
     background-color: #1a1a1a;;
     transition: 500ms;
     border-color: white;
-    z-index: 3;
+    z-index: 1;
+    height: auto;
     
     && svg path {
         stroke: white;
-        height: 4vh;
+        height: auto;
         width: 4vh;
         stroke-width: 1.5;
         transition: 500ms;
